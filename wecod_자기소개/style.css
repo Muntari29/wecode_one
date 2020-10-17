@@ -81,10 +81,6 @@ main .aside ul li.on {
   background-color: #ddd;
   color: gray;
 }
-main .aside ul li:hover {
-  color: white;
-  background-color: #444;
-}
 
 main .aside img{
   width : 70px;
@@ -94,7 +90,7 @@ main .aside img{
 
 main .aside img:hover{
   color: white;
-  background-color: rgb(4, 171, 248);
+  background-color: rgb(255, 255, 255);
 }
 main .content {
   min-height: calc(100vh - 196px);
@@ -113,21 +109,22 @@ main .content .section.intro h1 {
   margin-bottom: 5px;
   text-align: left;
   padding-left: 50px;
-
 }
 
-main .content img{
+main .content .section.intro img{
   width: 280px;
   height: 280px;
   margin-bottom: 30px;
 }
 main .content .section.gallery {
   padding: 16px;
+  padding-left: 0;
 }
 main .content .section.gallery article {
   display: inline-block;
-  margin: 8px;
+  margin: 40px;
   padding: 24px;
+  padding-bottom: 5px;
   background-color:#fff ;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
   border-radius: 12px;
@@ -135,9 +132,9 @@ main .content .section.gallery article {
 main .content .section.gallery article:hover {
   box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.33);
 }
-main .content .section.gallery article .photo {
-  width: 440px;
-  height: 320px;
+main .content .section.gallery article .image {
+  width: 550px;
+  height: 410px;
   border-radius: 4px;
   background-size: cover;
 }
@@ -166,7 +163,7 @@ main .content .section.gallery article .info .like:hover {
 main .content .section.gallery article .info .like.on {
   background-image: url("heart_on.png");
 }
-main .content .section.gallery article .info .author {
+main .content .section.gallery article .info{
   grid-area: author;
   font-weight:700;
   line-height: 32px;
@@ -183,10 +180,10 @@ main .write {
   bottom: 36px;
 }
 main .write div {
-  width: 88px;
-  height: 88px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
-  background-color: #ff4500;
+  background-color: #dddddd;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   cursor: pointer;
   background-image: url("camera.png");
@@ -198,7 +195,7 @@ main .write div:hover {
   box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.75);
 }
 
-#photo-1{ background-image:url(photo_1.jpg) }
+#photo-1{ background-image:url(freedom.jpeg) }
 #photo-2{ background-image:url(photo_2.jpg) }
 #photo-3{ background-image:url(photo_3.jpg) }
 #photo-4{ background-image:url(photo_4.jpg) }
@@ -206,18 +203,39 @@ main .write div:hover {
 
 footer {
   position: relative;
-  background-color:#383838;
-  padding:64px 0;
-  font-size:1.2rem;
-  text-align:center;
+  background-color:#6e6d6d;
+  padding-top: 10px;
   z-index: 1;
+}
+
+footer .title {
+  font-size: 20px;
+  color: white;
+  text-align: left;
+  padding-left: 60px;
+  font-weight: 700;
+}
+
+footer .info {
+  font-size: 15px;
+  text-align: left;
+  padding-left: 70px;
+  color: white;
+  margin: 0;
+}
+
+footer .icons img {
+  width: 30px;
+  height: 30px;
+}
+
+footer ul {
+  padding-left: 60px;
+  margin: 0;
 }
 footer ul li {
   display: inline-block;
-  padding: 0 48px;
-}
-footer ul li:not(:last-child) {
-  border-right:1px solid gray;
+  padding: 10px;
 }
 footer ul li a {
   color: #fff;
@@ -226,3 +244,34 @@ footer ul li a {
 footer ul li a:hover {
   opacity: 0.67;
 }
+
+footer .copyright {
+  color:white;
+  padding-left: 60px;
+  margin: 0;
+}
+}
+main .content .title {
+  font-size: 27px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  text-align: left;
+  padding-left: 50px;
+}
+
+main .content .icon img {
+  width: 60px ;
+  height: 60px ;
+  border-radius: 4px ;
+  font-weight: 700;
+  margin-top: 5px;
+  
+}
+
+main .section.gallery .title {  font-size: 27px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  text-align: left;
+  padding-left: 50px;
+}
+
