@@ -1,0 +1,277 @@
+body {
+  position: relative;
+  margin:0;
+}
+header {
+  display: grid;
+  grid-template-columns: 24px 400px 1fr 84px 24px;
+  grid-template-areas: 
+   'left-space logo nav account right-space';
+  position: fixed;
+  z-index: 1;
+  width: 100vw;
+  height: 64px;
+  line-height: 64px;
+  background-color: #b2b39a;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+}
+header .logo {
+  grid-area: logo;
+  font-size: 2rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: #fff;
+}
+header nav {
+  grid-area: nav;
+}
+header nav li {
+  display: inline-block;
+  margin-right: 36px;
+}
+header nav li.on {
+  border-bottom: 4px solid white;
+  height: 60px;
+}
+header nav li a {
+  font-size: 1.25rem;
+  text-decoration: none;
+  color: #fff;
+}
+header .account {
+  grid-area: account;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #fff;
+}
+header nav li a:hover,
+header .account:hover {
+  opacity: 0.67;
+}
+main {
+  position: relative;
+  padding-left: 170px;
+  padding-top: 64px;
+}
+main .aside {
+  position: fixed;
+  top: 64px;
+  bottom: 0;
+  left: 0;
+  width: 170px;
+  background-color:#eee;
+  border-right:1px solid #d3d3d3;
+}
+main .aside .option-title {
+  padding: 32px 0 0 32px;
+  font-size: 1.5em;
+  font-weight: 700;
+   color: gray;
+}
+main .aside ul {
+  border-radius: 50%;
+  width: 3px;
+  height: 3px;
+}
+main .aside ul li {
+  padding: 8px 34px;
+  cursor: pointer;
+}
+main .aside ul li.on {
+  background-color: #ddd;
+  color: gray;
+}
+
+main .aside img{
+  width : 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+main .aside img:hover{
+  color: white;
+  background-color: rgb(255, 255, 255);
+}
+main .content {
+  min-height: calc(100vh - 196px);
+  background-color: #fafafa;
+}
+main .content .section.intro {
+  background-color: #fff;
+  border-bottom: 1px solid #d3d3d3;
+  font-size: 1.5rem;
+  line-height: 1.3em;
+  text-align: center;
+}
+main .content .section.intro h1 {
+  font-size: 1.5em;
+  font-weight: 700;
+  margin-bottom: 5px;
+  text-align: left;
+  padding-left: 50px;
+}
+
+main .content .section.intro img{
+  width: 280px;
+  height: 280px;
+  margin-bottom: 30px;
+}
+main .content .section.gallery {
+  padding: 16px;
+  padding-left: 0;
+}
+main .content .section.gallery article {
+  display: inline-block;
+  margin: 40px;
+  padding: 24px;
+  padding-bottom: 5px;
+  background-color:#fff ;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+}
+main .content .section.gallery article:hover {
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.33);
+}
+main .content .section.gallery article .image {
+  width: 550px;
+  height: 410px;
+  border-radius: 4px;
+  background-size: cover;
+}
+main .content .section.gallery article .info {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  grid-template-rows: 32px auto;
+  grid-template-areas:
+    'like author' 
+    'like desc';
+  margin-top: 16px;
+  font-size: 1.2rem;
+}
+main .content .section.gallery article .info .like {
+  grid-area: like;
+  text-align: center;
+  font-size: 2.4em;
+  background-image: url("heart_off.png");
+  background-position: 50%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+main .content .section.gallery article .info .like:hover {
+  opacity: 0.5;
+}
+main .content .section.gallery article .info .like.on {
+  background-image: url("heart_on.png");
+}
+main .content .section.gallery article .info{
+  grid-area: author;
+  font-weight:700;
+  line-height: 32px;
+}
+main .content .section.gallery article .info .desc {
+  grid-area: desc;
+  padding: 4px 0;
+  color: gray;
+}
+main .write {
+  position: fixed;
+  z-index: 2;
+  right: 36px;
+  bottom: 36px;
+}
+main .write div {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #dddddd;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  background-image: url("camera.png");
+  background-size: 50%;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+main .write div:hover {
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.75);
+}
+
+#photo-1{ background-image:url(freedom.jpeg) }
+#photo-2{ background-image:url(photo_2.jpg) }
+#photo-3{ background-image:url(photo_3.jpg) }
+#photo-4{ background-image:url(photo_4.jpg) }
+#photo-5{ background-image:url(photo_5.jpg) }
+
+footer {
+  position: relative;
+  background-color:#6e6d6d;
+  padding-top: 10px;
+  z-index: 1;
+}
+
+footer .title {
+  font-size: 20px;
+  color: white;
+  text-align: left;
+  padding-left: 60px;
+  font-weight: 700;
+}
+
+footer .info {
+  font-size: 15px;
+  text-align: left;
+  padding-left: 70px;
+  color: white;
+  margin: 0;
+}
+
+footer .icons img {
+  width: 30px;
+  height: 30px;
+}
+
+footer ul {
+  padding-left: 60px;
+  margin: 0;
+}
+footer ul li {
+  display: inline-block;
+  padding: 10px;
+}
+footer ul li a {
+  color: #fff;
+  text-decoration: none
+}
+footer ul li a:hover {
+  opacity: 0.67;
+}
+
+footer .copyright {
+  color:white;
+  padding-left: 60px;
+  margin: 0;
+}
+}
+main .content .title {
+  font-size: 27px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  text-align: left;
+  padding-left: 50px;
+}
+
+main .content .icon img {
+  width: 60px ;
+  height: 60px ;
+  border-radius: 4px ;
+  font-weight: 700;
+  margin-top: 5px;
+  
+}
+
+main .section.gallery .title {  font-size: 27px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  text-align: left;
+  padding-left: 50px;
+}
+
